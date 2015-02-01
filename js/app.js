@@ -1,33 +1,54 @@
 $(document).ready(function() {
-	$("input").change(function textShadwow(){
-	var	 ShadowX = $('#pixel1').val();
-	var	 ShadowY = $('#pixel2').val();
-	var	 ShadowBlur = $('#pixel3').val();
-	var	 ShadowColor = $('#pixel4').val();
-		$( "#pixel1" ).change(function() {
-			var ShadowX = $('#pixel1').val();
-			console.log( "Handler for .change() called." + ShadowX+"px" );
-		});
-		$( "#pixel2" ).change(function() {
-			var ShadowY = $('#pixel2').val();
-			console.log( "Handler for .change() called." + ShadowY+"px" );
-		});
-		$( "#pixel3" ).change(function() {
-			var ShadowBlur = $('#pixel3').val();	
-			console.log( "Handler for .change() called." + ShadowBlur+"px" );
-		});
 
-		$( "#pixel4" ).change(function() {
-			var ShadowColor = $('#pixel4').val();	
-			console.log( "Handler for .change() called." + "#"+ShadowColor );
+// Set defualt CSS values //
+setStart = function(){
+		$("#txtshd").css('text-shadow', '#ffffff 0px 0px 0px');
+		$("#txtshd").css('font-size', '12pt');
+		};
 
+sapp = function(){
+	var	 shadowX = $('#pixel1').val()+"px";
+	var	 shadowY = $('#pixel2').val()+"px";
+	var	 shadowBlur = $('#pixel3').val()+"px";
+	var	 shadowColor = "#"+ $('#pixel4').val();
+	var  textSize = $('#pixel5').val()+"pt";
+	$("#txtshd").css({'text-shadow': shadowColor+" "+shadowX+" "+shadowY+" "+ shadowBlur});
+};
 
-		});
-$("#txtshd").css('textShadow', "#"+ShadowColor.value,ShadowX.value+"px ", ShadowY.value+"px ", ShadowBlur.value+"px");
+$('body').change(shadowApply = function(){
+	$( "#pixel1" ).change(function() {
+		shadowX = $('#pixel1').val()+"px";
+		console.log( "Handler for .change() called. " + shadowX );
+		sapp();
+	});
+	$( "#pixel2" ).change(function() {
+		shadowY = $('#pixel2').val()+"px";
+		console.log( "Handler for .change() called. " + shadowY );
+		sapp();
+	});
+	$( "#pixel3" ).change(function() {
+		shadowBlur = $('#pixel3').val()+"px";	
+		console.log( "Handler for .change() called. " + shadowBlur );
+		sapp();
+	});
+	$( "#pixel4" ).change(function() {
+		shadowColor = "#"+ $('#pixel4').val();	
+		console.log( "Handler for .change() called. " + shadowColor );
+		sapp();
+	});
+	$( "#pixel5" ).change(function() {
+		shadowColor = $('#pixel5').val()+"pt";	
+		console.log( "Handler for .change() called. " + textSize );
+		sapp();
 	});
 
 
 
 
+});
+
+
+setStart();
+shadowApply();
 
 });
