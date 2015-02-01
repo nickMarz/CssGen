@@ -22,12 +22,6 @@ sapp = function(){
 
 };
 
-// p { 
-//   text-shadow: 1px 1px 1px #000;
-// }
-
-
-
 $('body').change(shadowApply = function(){
 	$( "#pixel1" ).change(function() {
 		shadowX = $('#pixel1').val()+"px";
@@ -57,9 +51,6 @@ $('body').change(shadowApply = function(){
 	sapp();
 	liveCodeOut();
 });
-
-
-
 
 setStart();
 shadowApply();
