@@ -3,7 +3,7 @@ $(document).ready(function() {
 // Set defualt CSS values //
 setStart = function(){
 		$("#txtshd").css('text-shadow', '#ffffff 0px 0px 0px');
-		$("#txtshd").css('font-size', '12pt');
+		$("#txtshd").css('font-size', '22pt');
 		};
 
 sapp = function(){
@@ -12,7 +12,10 @@ sapp = function(){
 	var	 shadowBlur = $('#pixel3').val()+"px";
 	var	 shadowColor = "#"+ $('#pixel4').val();
 	var  textSize = $('#pixel5').val()+"pt";
+	var outCode = $("#txtshd");
 	$("#txtshd").css({'text-shadow': shadowColor+" "+shadowX+" "+shadowY+" "+ shadowBlur});
+	$("#txtshd").css('font-size', textSize);
+
 };
 
 $('body').change(shadowApply = function(){
@@ -37,14 +40,10 @@ $('body').change(shadowApply = function(){
 		sapp();
 	});
 	$( "#pixel5" ).change(function() {
-		shadowColor = $('#pixel5').val()+"pt";	
+		textSize = $('#pixel5').val()+"pt";	
 		console.log( "Handler for .change() called. " + textSize );
 		sapp();
 	});
-
-
-
-
 });
 
 
