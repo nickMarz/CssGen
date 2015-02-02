@@ -23,18 +23,16 @@ text-shadow: 0px 0px 13px #000000;
 color: white;
 }
 
+/*box shadow page*/
 
-/*.container {
-margin-top: 70px;
-}*/
+.boxShadow {
+width: 65%;
+height: 140px;
+background-color: #DEDEDE;
+}
 
-/*.fixedNav {
-position: fixed;
-top: 0px;
-margin-bottom: 70px;
-padding-bottom: 70px;
-background-color: #fff;
-z-index: 1000;
-width: 100%;
-height: 10px;
-}*/
+div#well1 {
+height: 140px;
+}
+
+/*box shadow page*/
