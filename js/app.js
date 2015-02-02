@@ -19,7 +19,13 @@ sapp = function(){
 	$("#txtshd").css('font-size', textSize);
 	
 	liveCodeOut = function(){
-	$('#codeOut').html( '<p>{<br>font-size: '+ textSize +'<br> text-shadow: '+ shadowX +' '+ shadowY +' '+ shadowBlur +' '+ shadowColor + '<br> }</p>');};};
+	$('#codeOut').html( '<p>{<br>font-size: '+ 
+		textSize +';<br> text-shadow: '+ shadowX +' '+ shadowY +' '+ shadowBlur +
+		' '+ shadowColor + ';<br> }</p>');
+	};
+};
+
+
 $('body').change(shadowApply = function(){
 	$( "#pixel1" ).change(function() {
 		shadowX = $('#pixel1').val()+"px";
