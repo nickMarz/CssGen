@@ -1,14 +1,14 @@
-var clientText = new ZeroClipboard( $("#text-to-copy"), {
-    moviePath: "ZeroClipboard.swf",
+var clientTarget = new ZeroClipboard( $("#clipboard-text"), {
+    moviePath: "0Clip/ZeroClipboard.swf",
     debug: false
 } );
 
-clientText.on( "load", function(clientText)
+clientTarget.on( "load", function(clientTarget)
 {
     $('#flash-loaded').fadeIn();
 
-    clientText.on( "complete", function(clientText, args) {
-        clientText.setText( args.text );
-        $('#text-to-copy-text').fadeIn();
+    clientTarget.on( "complete", function(clientTarget, args) {
+        clientTarget.setText( args.text );
+        $('#target-to-copy-text').fadeIn();
     } );
 } );
