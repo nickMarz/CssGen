@@ -12,13 +12,17 @@
 text-align: center;
 }
 
+
+
 h1.header {
 font-size: 48pt;
+color: #000000;
 }
 
 
 h1.txtshd{
  text-shadow: 3px 3px 3px #828282;
+	color: #000000;
 }
 
 i.fa.fa-circle.fa-lg {
@@ -47,13 +51,6 @@ vertical-align: top;
 
 /*Border Radius*/
 
-
-i#: child{
-
-font-size: 36pt;
-}
-
-
 #tleft {
 transform: rotate(-45deg);
 }
@@ -71,4 +68,34 @@ transform: rotate(135deg);
 .fa-angle-up {
 font-size: 20pt;
 }
+/*Border Radius*/
 
+/*long shadow page*/
+
+i#gitFa {
+font-size: 8em;
+padding-left: 11px;
+/*padding-right: 33%;*/
+}
+
+.longShadow {
+width: 100%;
+height: 140px;
+background-color: #DEDEDE;
+overflow: hidden;
+
+/*-moz-border-radius: 90px;
+-webkit-border-radius: 90px;
+border-radius: 90px;*/
+}
+
+h1.longshad {
+	color: #000000;
+	text-align: center;
+font-size: 50pt;
+font-weight: bold;
+margin-top: 29px;
+}
+
+
+/*long shadow page*/

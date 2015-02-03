@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 // Set defualt CSS values //
 setStart = function(){
-		$("#txtshd").css('text-shadow', '#ffffff 0px 0px 0px');
+		$("#txtshd").css('text-shadow', '#FFFFFF 0px 0px 0px');
 		$("#txtshd").css('font-size', '22pt');
 		};
 // set Pixel to 

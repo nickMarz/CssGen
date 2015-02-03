@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 // Set defualt CSS values //
 setStart = function(){
-		$("#boxShadow").css('box-shadow', '#ffffff 0px 0px 0px 0px');
+		$("#boxShadow").css('box-shadow', '#FFFFFF 0px 0px 0px 0px');
 		// $("#txtshd").css('font-size', '22pt');
 		};
 // set Pixel to 
@@ -22,8 +22,6 @@ sapp = function(){
 		' '+ shadowSpread});
 			}
 
-	// $("#txtshd").css('font-size', textSize);
-	
 	liveCodeOut = function(){
 
 		if (shadowInset === false) {
@@ -43,17 +41,9 @@ sapp = function(){
 					'box-shadow: inset '+ shadowX +' '+ shadowY +' '+ shadowBlur +' '+ shadowSpread +' '+ shadowColor + ';<br>' + 
 
 					'}</p>');
-
 			}
-
-
 	};
 };
-
-// -moz-box-shadow: 3px 3px 4px #444;
-// 	-webkit-box-shadow: 3px 3px 4px #444;
-// 	box-shadow:
-
 
 $('body').change(shadowApply = function(){
 	$( "#boxShd1" ).change(function() {
