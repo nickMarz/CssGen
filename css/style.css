@@ -39,5 +39,36 @@ height: 140px;
 }
 input#insetBox {
 vertical-align: top;
+}
 
 /*box shadow page*/
+
+
+
+/*Border Radius*/
+
+
+i#: child{
+
+font-size: 36pt;
+}
+
+
+#tleft {
+transform: rotate(-45deg);
+}
+
+#tright {
+transform: rotate(45deg);
+}
+#bleft {
+transform: rotate(-135deg);
+}
+#bright {
+transform: rotate(135deg);
+}
+
+.fa-angle-up {
+font-size: 20pt;
+}
+

@@ -2,89 +2,51 @@ $(document).ready(function() {
 
 // Set defualt CSS values //
 setStart = function(){
-		$("#boxShadow").css('box-shadow', '#ffffff 0px 0px 0px 0px');
-		// $("#txtshd").css('font-size', '22pt');
-		};
+	$("#boxRound").css('border-radius', '0px 0px 0px 0px');
+		
+	};
 // set Pixel to 
-sapp = function(){
-	var	 shadowX = $('#boxShd1').val()+"px";
-	var	 shadowY = $('#boxShd2').val()+"px";
-	var	 shadowBlur = $('#boxShd3').val()+"px";
-	var  shadowSpread = $('#boxShd5').val()+"px";
-	var	 shadowColor = "#"+ $('#boxShd4').val();
-	var	 shadowInset = $('#insetBox').prop('checked');
+radiusApply = function(){
+	var	 topLeft = $('#corRound1').val()+"px";
+	var	 topRight = $('#corRound2').val()+"px";
+	var	 bottomLeft = $('#corRound3').val()+"px";
+	var  bottomRight = $('#corRound4').val()+"px";
 	var  outCode = $("#txtshd");
-		if (shadowInset === false) {
-				$("#boxShadow").css({'box-shadow': shadowColor+" "+shadowX+" "+shadowY+" "+ shadowBlur+
-		' '+ shadowSpread});}
-		if ( shadowInset === true) {
-			$("#boxShadow").css({'box-shadow': 'inset' +shadowColor+" "+shadowX+" "+shadowY+" "+ shadowBlur+
-		' '+ shadowSpread});
-			}
+	$("#boxRound").css({'border-radius': topLeft+" "+topRight+" "+bottomLeft+" "+bottomRight});
 
-	// $("#txtshd").css('font-size', textSize);
-	
 	liveCodeOut = function(){
-
-		if (shadowInset === false) {
-				$('#codeOut2').html(
-					'<p>{' + 
-					'<br> -moz-box-shadow: '+ shadowX +' '+ shadowY +' '+ shadowBlur +' '+ shadowSpread +' '+ shadowColor + ';<br>' + 
-					'-webkit-box-shadow: '+ shadowX +' '+ shadowY +' '+ shadowBlur +' '+ shadowSpread +' '+ shadowColor + ';<br>' + 
-					'box-shadow: '+ shadowX +' '+ shadowY +' '+ shadowBlur +' '+ shadowSpread +' '+ shadowColor + ';<br>' + 
-
-					'}</p>');
-						}
-		if ( shadowInset === true) {
-				$('#codeOut2').html(
-					'<p>{' + 
-					'<br> -moz-box-shadow: inset '+ shadowX +' '+ shadowY +' '+ shadowBlur +' '+ shadowSpread +' '+ shadowColor + ';<br>' + 
-					'-webkit-box-shadow: inset '+ shadowX +' '+ shadowY +' '+ shadowBlur +' '+ shadowSpread +' '+ shadowColor + ';<br>' + 
-					'box-shadow: inset '+ shadowX +' '+ shadowY +' '+ shadowBlur +' '+ shadowSpread +' '+ shadowColor + ';<br>' + 
-
-					'}</p>');
-
-			}
-
-
+		$('#codeOut2').html('<p>{' + 
+			'<br> -moz-border-radius: '+ topLeft +' '+ topRight +' '+ bottomLeft +' '+ bottomRight + ';<br>' + 
+			'-webkit-border-radius: '+ topLeft +' '+ topRight +' '+ bottomLeft +' '+ bottomRight + ';<br>' + 
+			'border-radius: '+ topLeft +' '+ topRight +' '+ bottomLeft +' '+ bottomRight + ';<br>' + 
+			'}</p>');
 	};
 };
 
-// -moz-box-shadow: 3px 3px 4px #444;
-// 	-webkit-box-shadow: 3px 3px 4px #444;
-// 	box-shadow:
+
 
 
 $('body').change(shadowApply = function(){
-	$( "#boxShd1" ).change(function() {
-		shadowX = $('#boxShd1').val()+"px";
-		console.log( "Handler for .change() called. " + shadowX );
+	$( "#corRound1" ).change(function() {
+		topLeft = $('#corRound1').val()+"px";
+		console.log( "Handler for .change() called. " + topLeft );
 		
 	});
-	$( "#boxShd2" ).change(function() {
-		shadowY = $('#boxShd2').val()+"px";
-		console.log( "Handler for .change() called. " + shadowY );
+	$( "#corRound2" ).change(function() {
+		topRight = $('#corRound2').val()+"px";
+		console.log( "Handler for .change() called. " + topRight );
 		
 	});
-	$( "#boxShd3" ).change(function() {
-		shadowBlur = $('#boxShd3').val()+"px";	
-		console.log( "Handler for .change() called. " + shadowBlur );
+	$( "#corRound3" ).change(function() {
+		bottomLeft = $('#corRound3').val()+"px";	
+		console.log( "Handler for .change() called. " + bottomLeft );
 		
 	});
-	$( "#boxShd4" ).change(function() {
-		shadowColor = "#"+ $('#boxShd4').val();	
-		console.log( "Handler for .change() called. " + shadowColor );
-		
+	$( "#corRound4" ).change(function() {
+		bottomRight = $('#corRound4').val()+"pt";	
+		console.log( "Handler for .change() called. " + bottomRight );
 	});
-	$( "#boxShd5" ).change(function() {
-		shadowSpread = $('#boxShd5').val()+"pt";	
-		console.log( "Handler for .change() called. " + shadowSpread );
-	});
-	$( "#insetBox" ).change(function() {
-		shadowInset = $('#insetBox').prop('checked');	
-		console.log( "Handler for .change() called. " + shadowInset );	
-	});
-	sapp();
+	radiusApply();
 	liveCodeOut();
 });
 
