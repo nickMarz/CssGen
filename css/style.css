@@ -41,6 +41,11 @@ background-color: #DEDEDE;
 div#well1 {
 height: 140px;
 }
+
+div#well4 {
+height: 140px;
+overflow: scroll;
+}
 input#insetBox {
 vertical-align: top;
 }

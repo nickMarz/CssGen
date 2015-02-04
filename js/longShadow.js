@@ -37,11 +37,10 @@ longShadow = function(){
 	
 	
 	liveCodeOut = function(){
-		$('#codeOut4').html( '<p>{<br>text-shadow: '+ leftRight+'px' +' '+ topDown+'px' +' '+
-			' '+ '#'+shadowColor + ';<br> }</p>' + shadowstring);
+		$('#codeOut4').html( '<p>{<br>text-shadow: '+ shadowstring+ ';<br> }</p>');
 	};
+		hexToRgb(shadowColor);
 };
-
 
 
 var shadowstring = [];
@@ -55,7 +54,7 @@ longShadowGenerator = function(){
 		console.log(x);
 		// console.log("----------- Next Batch -----------");
 		if (i!==x-1) {
-			shadowstring.push( 'rgb(128,55,66) '+i +'px '+i+'px, ');
+			shadowstring.push( 'rgb(128,55,66) '+leftRight+i +'px '+topDown+i+'px, ');
 		}
 		else{
 			shadowstring.push( 'rgb(128,55,66) '+i +'px '+i+'px');
@@ -107,6 +106,12 @@ $('body').change(shadowApply = function(){
 
 setStart();
 shadowApply();
+
+// liveCodeOut = function(){
+// 		$('#codeOut4').html( '<p>{<br>text-shadow: '+ leftRight+'px' +' '+ topDown+'px' +' '+
+// 			' '+ '#'+shadowColor + ';<br> }</p>' + shadowstring);
+// 	};
+
 
 
 	// $('#longShad').css({'text-shadow': shadowColor+' '+leftRight+'px'+' '+topDown+'px'+' '+ gradValue+'px' });
