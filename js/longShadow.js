@@ -10,35 +10,20 @@ upDwn = parseInt($('#longShd2').val());
 
 // hex to RGB converter //
 
-hexToRgb = function(hex) {
+hexToRgb = function(hex, op) {
 	    // Expand shorthand form (e.g. '03F') to full form (e.g. '0033FF')
 	    var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
 	    hex = hex.replace(shorthandRegex, function(m, r, g, b) {
 	    	return r + r + g + g + b + b;
 	    });
-
 	    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
 		var r = parseInt(result[1], 16);
 		var g = parseInt(result[2], 16);
 		var b = parseInt(result[3], 16);
-		var a = 1.0;
-
-		// console.log('test outout ------ 	rgba('+r+',',g+',',b+',',a+')');
-//  rgab( ##, ##, ##, ##)
-// 'rgba('+r+', '+g+', '+ b+', 'a+ ')';
+		var a = op;
 
 	    return  ('rgba('+r+','+g+','+b+','+a+ ')');
-	    	  // 'rgba('+r+','+g+','+b+','+a+')'
-
-		    // return result ? {
-		    // 	r: parseInt(result[1], 16),
-	    	// 	g: parseInt(result[2], 16),
-	    	// 	b: parseInt(result[3], 16),
-	    	// 	a: 1.0
-	    // }
-	    // : 
-	    // null;
-	};
+		};
 
 newColor = hexToRgb('#'+shadowColor);
 
@@ -49,45 +34,30 @@ setStart = function(){
 	$('#longShad').css('text-shadow', '#000000 10px 10px 10px');
 };
 
-
-// set longShadow to 
-// longShadow = function(){
-// 	var	 leftRight = $('#longShd1').val();
-// 	var	 topDown = $('#longShd2').val();
-// 	var	 shadowLength = $('#longShd3').val();
-// 	var	 shadowColor = $('#longShd4').val();
-// 	var	 gradYesNo = $('#insetBox').prop('checked');
-// 	var outCode = $('#longShad');
-// };		
-
 liveCodeOut = function(){
 	$('#codeOut4').html( '<p>{<br>text-shadow: '+ shadowstring+ ';<br> }</p>');
 	console.log(newColor);
 };
 
-
-
-
-
-
 longShadowGenerator = function(){
 
 	var loopTimes = $('#longShd3').val();
 	var x = parseInt(loopTimes);
-	// newColor = hexToRgb('#'+shadowColor);
+	newColor = hexToRgb('#'+shadowColor, 0.5);
 	// var convertedColor = newColor;
 	shadowstring = []; //clear shadowstring on prior to new loop
-	for (var i = 0; i < x; i++) {
-			lfRt = parseInt($('#longShd1').val());
-			upDwn = parseInt($('#longShd2').val());
+	for (var i = 0; i < (x*20); i++) {
+			lfRt = parseFloat($('#longShd1').val());
+			upDwn = parseFloat($('#longShd2').val());
 		// console.log(loopTimes );
 		console.log(x);
+		//newColor = hexToRgb('#'+shadowColor);
 		// console.log("----------- Next Batch -----------");
-		if (i!==x-1) {
-			shadowstring.push( newColor +' '+(lfRt+i) +'px '+(upDwn+i)+'px, ');
+		if (i!==(x*20)-1) {
+			shadowstring.push( newColor +' '+(lfRt*(i/20)) +'px '+(upDwn*(i/20))+'px, ');
 		}
 		else{
-			shadowstring.push( newColor +' '+(lfRt+i) +'px '+(upDwn+i)+'px');
+			shadowstring.push( newColor +' '+(lfRt*(i/20)) +'px '+(upDwn*(i/20))+'px');
 		}
 	}//end for loop
 	console.log(shadowstring.join(''));
