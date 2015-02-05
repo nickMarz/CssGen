@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 // Set defualt CSS values //
 setStart = function(){
-	$("#boxTrans").css('transform', '0px 0px 0px 0px');
+	$("#boxTrans").css('transform','scale(1) rotate(0deg) translateX(0px) translateY(0px);');
 		
 	};
 // set Pixel to 
