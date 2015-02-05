@@ -37,7 +37,11 @@ width: 65%;
 height: 140px;
 background-color: #DEDEDE;
 }
-
+.boxTrans {
+width: 65%;
+height: 140px;
+background-color: #DEDEDE;
+}
 div#well1 {
 height: 140px;
 }
