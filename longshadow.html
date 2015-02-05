@@ -1,109 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Generate Me CSS3</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">   
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> 
+  <meta charset="UTF-8">
+  <title>Generate Me CSS3</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">   
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> 
 </head>
 
 <body>
-       <!-- Static navbar -->
-    <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">GM CSS3</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="index.html">Text Shadow</a></li>
-            <li class="active"><a href="longshadow.html">Long & Flat Shadow</a></li>
-            <li><a href="boxshadow.html">Box Shadow</a></li>
-            <li><a href="boxRad.html">Border Radius</a></li>
-            <li><a href="transform.html">Transform</a></li>
-            <li><a href="transition.html">Transition</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-  <!-- Begin Page Content -->
+ <!-- Static navbar -->
+ <nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">GM CSS3</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Text Shadow</a></li>
+        <li class="active"><a href="longshadow.html">Long &amp; Flat Shadow</a></li>
+        <li><a href="boxshadow.html">Box Shadow</a></li>
+        <li><a href="boxRad.html">Border Radius</a></li>
+        <li><a href="transform.html">Transform</a></li>
+        <li><a href="transition.html">Transition</a></li>
+        <li><a href="boxBorder.html">Border</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<!-- Begin Page Content -->
 <div class="container"> 
-    <div class="row">
-      <div class="col-md-10">
-        <a href="#txtShd"></a>
-        <h1 class="header">Generate Me CSS3</h1>  <h3>Long & Flat text/box-shadow</h3>
-      </div><!-- /.col-md-10 -->
+  <div class="row">
+    <div class="col-md-10">
+      <a href="#txtShd"></a>
+      <h1 class="header">Generate Me CSS3</h1>  <h3>Long & Flat text/box-shadow</h3>
+    </div><!-- /.col-md-10 -->
     <div class="col-md-2"></div>
-    </div><!-- /.row -->
-<div class="row spacer"></div>    
+  </div><!-- /.row -->
+  <div class="row spacer"></div>    
 
-<div class="row">
-  <!-- <div class="col-md-1"></div> -->
-  <div class="col-md-2"><i class="fa fa-arrows-h fa-lg"></i><h4> Left/Right</h4> 
-    <div class="input-group">
+  <div class="row">
+  <div class="col-lg-1"></div>
+    <!-- <div class="col-md-1"></div> -->
+    <div class="col-md-2"><i class="fa fa-arrows-h fa-lg"></i><h4> Left/Right</h4> 
+      <div class="input-group">
 
-      <input type="number" class="form-control" placeholder="pixel value" id="longShd1"  value="0"> <!-- Pixel X Value -->
-      <span class="input-group-addon" id="basic-addon1">px</span>
-  </div><!-- /input-group -->
-</div><!-- /.col-md-2 -->  
-<!-- <div class="col-md-1"></div> -->
-<div class="col-md-2"><i class="fa fa-arrows-v fa-lg"></i> <h4> Up/Down</h4> 
-    <div class="input-group">
+        <input type="number" class="form-control" placeholder="pixel value" id="longShd1"  value="0"> <!-- Pixel X Value -->
+        <span class="input-group-addon" id="basic-addon1">px</span>
+      </div><!-- /input-group -->
+    </div><!-- /.col-md-2 -->  
+    <!-- <div class="col-md-1"></div> -->
+    <div class="col-md-2"><i class="fa fa-arrows-v fa-lg"></i> <h4> Up/Down</h4> 
+      <div class="input-group">
         <input type="number" class="form-control" placeholder="pixel value" id="longShd2"  value="0"> <!-- Pixel Y Value -->
-      <span class="input-group-addon" id="basic-addon1">px</span>
-  </div><!-- /input-group -->
-</div><!-- /.col-md-2 -->
-<div class="col-md-2"><i class="fa fa-circle fa-lg"></i><h4>Shadow Length</h4> 
-    <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">px</span>
+      </div><!-- /input-group -->
+    </div><!-- /.col-md-2 -->
+    <div class="col-md-2"><i class="fa fa-circle fa-lg"></i><h4>Shadow Length</h4> 
+      <div class="input-group">
 
-      <input type="number" class="form-control" placeholder="pixel value" id="longShd3"  value="1"> <!-- Shadow Length -->
-      <span class="input-group-addon" id="basic-addon1">px</span>
-  </div><!-- /input-group -->
-</div><!-- /.col-md-2 -->
+        <input type="number" class="form-control" placeholder="pixel value" id="longShd3"  value="0"> <!-- Shadow Length -->
+        <span class="input-group-addon" id="basic-addon1">px</span>
+      </div><!-- /input-group -->
+    </div><!-- /.col-md-2 -->
 
-<div class="col-md-2"><i class="fa fa-eyedropper fa-lg"></i><h4>Color</h4> 
-    <div class="input-group">
+    <div class="col-md-2"><i class="fa fa-eyedropper fa-lg"></i><h4>Color</h4> 
+      <div class="input-group">
 
-      <input type="text" class="form-control color" placeholder="color value" id="longShd4"  value="000000"> <!--Color Value -->
-      <span class="input-group-addon" id="basic-addon1">hex</span>
-  </div><!-- /input-group -->
-</div><!-- /.col-md-2 -->
+        <input type="text" class="form-control color" placeholder="color value" id="longShd4"  value="353535"> <!--Color Value -->
+        <span class="input-group-addon" id="basic-addon1">hex</span>
+      </div><!-- /input-group -->
+    </div><!-- /.col-md-2 -->
 
-  <div class="col-lg-2">
-    <i class="fa fa-compress"></i><h4>Gradient/Solid Color</h4>  <p><input type="checkbox" aria-label="" value="false" id="insetBox"> Check 2 Toggle</p>
-  </div><!-- /.col-lg-2 -->
+    <div class="col-lg-2">
+      <i class="fa fa-compress"></i><h4>Gradient/Solid Color</h4>  <p><input type="checkbox" aria-label="" value="false" id="insetBox"> Check 2 Toggle</p>
+    </div><!-- /.col-lg-2 -->
 
 
-  <div class="col-lg-2">
+    <div class="col-lg-2">
 
-  </div><!-- /.col-lg-2 -->
-<div class="row spacersmall"></div>
-</div><!-- /.row -->
+    </div><!-- /.col-lg-2 -->
+    <div class="row spacersmall"></div>
+  </div><!-- /.row -->
 
-<div class="row">
-    <div class="col-lg-6">  <div class="row spacersmall"></div>
+  <div class="row">
+<div class="col-lg-1"></div>
+    <div class="col-lg-4">  <div class="row spacersmall"></div>
     <div id="well4" class="well">
-        
-        <div id="codeBloc"><!-- Generated Code Goes Here -->
-            <p id="codeOut4" class="codeOut"></p>
-        </div> <!-- Generated Code Goes Here -->
+      
+      <div id="codeBloc"><!-- Generated Code Goes Here -->
+        <p id="codeOut4" class="codeOut"></p>
+      </div> <!-- Generated Code Goes Here -->
     </div>
     <!-- <button id="target-to-copy" data-clipboard-target="clipboard-text">Click To Copy</button> -->
-</div><!-- /.col-lg-6 -->
+  </div><!-- /.col-lg-6 -->
 
-<div class="col-lg-2"> <div class="row spacersmall"></div><!-- Live Reaction of CSS Parameters -->
-   <div id="longShadow" class="longShadow">
+  <div class="col-lg-4"> <div class="row spacersmall"></div><!-- Live Reaction of CSS Parameters -->
+  <div id="longShadow" class="longShadow">
    <!-- <i class="fa fa-github" id="gitFa"></i> -->
-<h1 id="longShad" class="longshad">YO</h1>
+   <h1 id="longShad" class="longshad">CCS3</h1>
 
 
-   </div>
+ </div>
 </div><!-- /.col-lg-2 --> <!-- Live Reaction of CSS Parameters -->
 </div><!-- /.row -->
 </div>
-
-<!-- Next Section -->
+<div class="row spacer"></div>   
 
 <!-- Load Scripts -->
 <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
