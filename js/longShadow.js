@@ -31,37 +31,36 @@ newColor = hexToRgb('#'+shadowColor);
 
 // Set defualt CSS values //
 setStart = function(){
-	$('#longShad').css('text-shadow', '#000000 10px 10px 10px');
+	$('#longShad').css('text-shadow: #000000 0px 0px');
 };
 
 liveCodeOut = function(){
-	$('#codeOut4').html( '<p>{<br>text-shadow: '+ shadowstring+ ';<br> }</p>');
+	$('#codeOut4').html( '<p>{<br>text-shadow: '+ joinedString+ ';<br> }</p>');
 	console.log(newColor);
+
+		// console.log(shadowstring);
 };
 
 longShadowGenerator = function(){
 
 	var loopTimes = $('#longShd3').val();
 	var x = parseInt(loopTimes);
-	newColor = hexToRgb('#'+shadowColor, 0.5);
-	// var convertedColor = newColor;
+	newColor = hexToRgb('#'+shadowColor, 0.1); // Convert hex to RGBA Color //
 	shadowstring = []; //clear shadowstring on prior to new loop
 	for (var i = 0; i < (x*20); i++) {
 			lfRt = parseFloat($('#longShd1').val());
 			upDwn = parseFloat($('#longShd2').val());
-		// console.log(loopTimes );
-		console.log(x);
-		//newColor = hexToRgb('#'+shadowColor);
-		// console.log("----------- Next Batch -----------");
+			console.log(x);
 		if (i!==(x*20)-1) {
-			shadowstring.push( newColor +' '+(lfRt*(i/20)) +'px '+(upDwn*(i/20))+'px, ');
+			shadowstring.push( ' '+newColor +' '+(lfRt*(i/20)) +'px '+(upDwn*(i/20))+'px, ');
 		}
 		else{
 			shadowstring.push( newColor +' '+(lfRt*(i/20)) +'px '+(upDwn*(i/20))+'px');
 		}
 	}//end for loop
-	console.log(shadowstring.join(''));
-	$('#longShad').attr('style','text-shadow:'+ shadowstring.join(''));
+	joinedString = shadowstring.join('');
+	console.log('Begin String'+joinedString);
+	$('#longShad').attr('style','text-shadow:'+joinedString);
 };
 
 

@@ -8,19 +8,31 @@
 	margin-top: 200px; /* */
 }
 
-.col-lg-10 {
+.container {
 	text-align: center;
 }
 
 h1.header {
 	font-size: 48pt;
 	color: #000000;
+	font-variant: small-caps;
+	font-weight: bold;
+
 }
 
 
 h1.txtshd{
 	text-shadow: 3px 3px 3px #828282;
 	color: #000000;
+}
+p#codeOut {
+text-align: left;
+}
+p#codeOut2 {
+text-align: left;
+}
+p#codeOut4 {
+text-align: left;
 }
 
 i.fa.fa-circle.fa-lg {
@@ -42,7 +54,7 @@ i.fa.fa-circle.fa-lg {
 }
 div#well1 {
 	height: 140px;
-	overflow-x: scroll;
+	overflow-y: scroll;
 }
 
 div#well4 {
