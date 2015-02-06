@@ -25,25 +25,7 @@ h1.txtshd{
 	text-shadow: 3px 3px 3px #828282;
 	color: #000000;
 }
-p#codeOut {
-text-align: left;
-}
-p#codeOut2 {
-text-align: left;
-}
-p#codeOut3 {
-text-align: left;
-}
-p#codeOut4 {
-text-align: left;
-}
-p#codeOut5 {
-text-align: left;
-}
-p#codeOut6 {
-text-align: left;
-}
-p#codeOut7 {
+p.codeOut {
 text-align: left;
 }
 
