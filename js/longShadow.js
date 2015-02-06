@@ -31,7 +31,6 @@ hexToRgb = function(hex, op) {
 newColor = hexToRgb('#'+shadowColor);
 
 // hex to RGB converter //
-
 // Set defualt CSS values //
 setStart = function(){
 	$('#longShad').css('text-shadow: #000000 0px 0px');
@@ -45,7 +44,8 @@ liveCodeOut = function(){
 };
 
 longShadowGenerator = function(){
-
+	gradSteps = $('#longShd5').val();
+	var opacity = parseFloat(gradSteps);
 	var loopTimes = $('#longShd3').val();
 	var x = parseInt(loopTimes);
 	// var opacity = parseFloat(gradSteps);
@@ -63,7 +63,7 @@ longShadowGenerator = function(){
 		}
 	}//end for loop
 	joinedString = shadowstring.join(''); // joins the generated steps for output //
-	console.log('Begin String'+joinedString);
+	// console.log('Begin String'+joinedString);
 	$('#longShad').attr('style','text-shadow:'+joinedString);
 };
 
