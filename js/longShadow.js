@@ -63,7 +63,7 @@ longShadowGenerator = function(){
 		}
 	}//end for loop
 	joinedString = shadowstring.join(''); // joins the generated steps for output //
-	console.log('Begin String'+joinedString);
+	// console.log('Begin String'+joinedString);
 	$('#longShad').attr('style','text-shadow:'+joinedString);
 };
 
