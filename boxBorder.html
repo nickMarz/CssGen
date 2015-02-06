@@ -32,7 +32,7 @@
 <div class="container"> 
   <div class="row">
     <div class="col-md-12">
-      <a href="#txtShd"></a>
+      
       <h1 class="header">Generate Me CSS3</h1>  <h3>border</h3>
     </div><!-- /.col-md-10 -->
     <div class="col-md-2"></div>
@@ -41,33 +41,42 @@
 
   <div class="row">
     <div class="col-md-2"></div>
-    <div class="col-md-2"><i class="fa fa-angle-up fa-lg" id="tleft"></i><h4> Top Left</h4> 
+    <div class="col-md-2"><i class="fa fa-angle-up fa-lg" id="tleft"></i><h4> Border Thickness</h4> 
       <div class="input-group">
 
-        <input type="number" class="form-control" placeholder="pixel value" id="corRound1"  value="0"> <!-- Pixel X Value -->
+        <input type="number" class="form-control" placeholder="pixel value" id="boxBorder1"  value="1"> <!-- Pixel X Value -->
         <span class="input-group-addon" id="basic-addon1">px</span>
       </div><!-- /input-group -->
     </div><!-- /.col-md-2 -->  
     <!-- <div class="col-md-1"></div> -->
-    <div class="col-md-2"><i class="fa fa-angle-up fa-lg" id="tright"></i> <h4> Top Right</h4> 
-      <div class="input-group">
-        <input type="number" class="form-control" placeholder="pixel value" id="corRound2"  value="0"> <!-- Pixel Y Value -->
-        <span class="input-group-addon" id="basic-addon1">px</span>
+    <div class="col-md-2"><i class="fa fa-angle-up fa-lg" id="tright"></i> <h4> Border Type</h4> 
+      <div class="input-group-btn">
+       <select class="form-control" id="boxBorder2"><!-- Border Type -->
+        <option>dotted</option>
+        <option>dashed</option>
+        <option>solid</option>
+        <option>double</option>
+        <option>groove</option>
+        <option>ridge</option>
+        <option>inset</option>
+        <option>outset</option>
+      </select>
       </div><!-- /input-group -->
     </div><!-- /.col-md-2 -->
-    <div class="col-md-2"><i class="fa fa-angle-up fa-lg" id="bleft"></i><h4> Bottom Left</h4> 
+    <div class="col-md-4">
+    <i class="fa fa-eyedropper fa-lg"></i><h4> Border Color</h4> 
       <div class="input-group">
-
-        <input type="number" class="form-control" placeholder="pixel value" id="corRound3"  value="0" min="0"> <!-- Pixel Value Blur -->
-        <span class="input-group-addon" id="basic-addon1">px</span>
+        <input type="text" class="form-control color" placeholder="pixel value" id="boxBorder3"  value="353535"> <!-- Border Color -->
+        <span class="input-group-addon" id="basic-addon1">hex</span>
       </div><!-- /input-group -->
     </div><!-- /.col-md-2 -->
-    <div class="col-md-2"><i class="fa fa-angle-up fa-lg" id="bright"></i><h4> Bottom Right</h4> 
-      <div class="input-group">
-
-        <input type="number" class="form-control" id="corRound4"  value="0"> <!--Font Size -->
-        <span class="input-group-addon" id="basic-addon1">px</span>
-      </div><!-- /input-group -->
+    <div class="col-md-2">
+    <!-- <i class="fa fa-angle-up fa-lg" id="bright"></i><h4> Bottom Right</h4>  -->
+      <!-- <div class="input-group"> -->
+        <!-- <input type="number" class="form-control" id="boxBorder4"  value="0"> 
+        <!-Font Size --> 
+        <!-- <span class="input-group-addon" id="basic-addon1">px</span> -->
+      <!-- </div>/input-group -->
     </div><!-- /.col-md-2 -->
     <div class="col-lg-2"></div>
     <div class="col-lg-2"></div>
@@ -79,22 +88,23 @@
   </div><!-- /.row -->
 
   <div class="row">
-  <div class="col-md-2"></div>
+  <div class="col-lg-2"></div>
     <div class="col-lg-4">  <div class="row spacersmall"></div>
-    <div id="well1" class="well">
+    <div id="well7" class="well">
       
       <div id="codeBloc"><!-- Generated Code Goes Here -->
-        <p id="codeOut2" class="codeOut"></p>
+        <p id="codeOut7" class="codeOut"></p>
       </div> <!-- Generated Code Goes Here -->
     </div>
     <!-- <button id="target-to-copy" data-clipboard-target="clipboard-text">Click To Copy</button> -->
   </div><!-- /.col-lg-6 -->
 
   <div class="col-lg-4"> <div class="row spacersmall"></div><!-- Live Reaction of CSS Parameters -->
-  <div id="boxRound" class="boxShadow"></div>
+  <div id="boxBorder" class="boxBorder"></div>
 </div><!-- /.col-lg-6 --> <!-- Live Reaction of CSS Parameters -->
 <div class="col-md-2"></div>
 </div><!-- /.row -->
+</div>
 </div>
 <!-- Load Scripts -->
 <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>

@@ -1,56 +1,50 @@
 $(document).ready(function() {
+	var	 borderThickness = $('#boxBorder1').val()+"px";
+	var	 borderType = $('#boxBorder2').val();
+	var	 borderColor = "#"+$('#boxBorder3').val();
+	// var  bottomRight = $('#boxBorder4').val()+"px";
+	var  outCode = $("#txtshd");
 
 // Set defualt CSS values //
 setStart = function(){
-	$("#boxRound").css('border-radius', '0px 0px 0px 0px');
-		
+	$("#boxBorder").css({'border': '1px solid #000000'});
 	};
 // set Pixel to 
-radiusApply = function(){
-	var	 topLeft = $('#corRound1').val()+"px";
-	var	 topRight = $('#corRound2').val()+"px";
-	var	 bottomLeft = $('#corRound3').val()+"px";
-	var  bottomRight = $('#corRound4').val()+"px";
-	var  outCode = $("#txtshd");
-	$("#boxRound").css({'border-radius': topLeft+" "+topRight+" "+bottomLeft+" "+bottomRight});
+radiusApply = function(){	
+	$("#boxBorder").css({'border': borderThickness+" "+borderType+" "+borderColor});
 
 	liveCodeOut = function(){
-		$('#codeOut2').html('<p>{' + 
-			'<br> -moz-border-radius: '+ topLeft +' '+ topRight +' '+ bottomLeft +' '+ bottomRight + ';<br>' + 
-			'-webkit-border-radius: '+ topLeft +' '+ topRight +' '+ bottomLeft +' '+ bottomRight + ';<br>' + 
-			'border-radius: '+ topLeft +' '+ topRight +' '+ bottomLeft +' '+ bottomRight + ';<br>' + 
+		$('#codeOut7').html('<p>{' + 
+			'<br> -moz-border: '+ borderType +' '+ borderThickness + " "+borderColor+';<br>' + 
+			'-webkit-border: '+ borderType +' '+ borderThickness + " "+borderColor+';<br>' + 
+			'border: '+ borderType +' '+ borderThickness + " "+borderColor+';<br>' + 
 			'}</p>');
 	};
 };
 
-
-
-
-$('body').change(shadowApply = function(){
-	$( "#corRound1" ).change(function() {
-		topLeft = $('#corRound1').val()+"px";
-		console.log( "Handler for .change() called. " + topLeft );
+// watch for changes in input boxes, reapply current value to var //
+$('body').change(rApply = function(){
+	$( "#boxBorder1" ).change(function() {
+		borderThickness = $('#boxBorder1').val()+"px";
 		
 	});
-	$( "#corRound2" ).change(function() {
-		topRight = $('#corRound2').val()+"px";
-		console.log( "Handler for .change() called. " + topRight );
+	$( "#boxBorder2" ).change(function() {
+		borderType = $('#boxBorder2').val();
 		
 	});
-	$( "#corRound3" ).change(function() {
-		bottomLeft = $('#corRound3').val()+"px";	
-		console.log( "Handler for .change() called. " + bottomLeft );
+	$( "#boxBorder3" ).change(function() {
+		borderColor =  "#"+$('#boxBorder3').val();	
 		
 	});
-	$( "#corRound4" ).change(function() {
-		bottomRight = $('#corRound4').val()+"pt";	
-		console.log( "Handler for .change() called. " + bottomRight );
-	});
+	// $( "#boxBorder4" ).change(function() {
+	// 	bottomRight = $('#boxBorder4').val()+"pt";	
+	// });
 	radiusApply();
 	liveCodeOut();
 });
 
 setStart();
-shadowApply();
+radiusApply();
+liveCodeOut();	
 
 });

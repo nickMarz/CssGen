@@ -4,7 +4,10 @@ leftRight = $('#longShd1').val();
 topDown = $('#longShd2').val();
 shadowLength = $('#longShd3').val();
 shadowColor = $('#longShd4').val();
+gradSteps = $('#longShd5').val();
+
 var shadowstring = [];
+var opacity = parseFloat(gradSteps);
 lfRt = parseInt($('#longShd1').val());
 upDwn = parseInt($('#longShd2').val());
 
@@ -45,7 +48,8 @@ longShadowGenerator = function(){
 
 	var loopTimes = $('#longShd3').val();
 	var x = parseInt(loopTimes);
-	newColor = hexToRgb('#'+shadowColor, 0.1); // Convert hex to RGBA Color //
+	// var opacity = parseFloat(gradSteps);
+	newColor = hexToRgb('#'+shadowColor, opacity); // Convert hex to RGBA Color //
 	shadowstring = []; //clear shadowstring on prior to new loop
 	for (var i = 0; i < (x*20); i++) {
 			lfRt = parseFloat($('#longShd1').val());
@@ -58,48 +62,38 @@ longShadowGenerator = function(){
 			shadowstring.push( newColor +' '+(lfRt*(i/20)) +'px '+(upDwn*(i/20))+'px');
 		}
 	}//end for loop
-	joinedString = shadowstring.join('');
+	joinedString = shadowstring.join(''); // joins the generated steps for output //
 	console.log('Begin String'+joinedString);
 	$('#longShad').attr('style','text-shadow:'+joinedString);
 };
 
-
+// watch for changes in input boxes, reapply current value to var //
 $('body').change(shadowApply = function(){
 	$( '#longShd1' ).change(function() {
 		leftRight = $('#longShd1').val();
-		console.log( 'Handler for .change() called. ' + leftRight+'px' );
-		
 	});
 	$( '#longShd2' ).change(function() {
 		topDown = $('#longShd2').val();
-		console.log( 'Handler for .change() called. ' + topDown+'px' );
-		
 	});
 	$( '#longShd3' ).change(function() {
 		shadowLength = $('#longShd3').val();	
-		console.log( 'Handler for .change() called. ' + shadowLength+'px' );
-		
 	});
 	$( '#longShd4' ).change(function() {
 		shadowColor = $('#longShd4').val();	
-		console.log( 'Handler for .change() called. ' + '#'+shadowColor );
-		
 	});
-	$( '#insetBox' ).change(function() {
-		var	 gradYesNo = $('#insetBox').prop('checked');	
-		console.log( 'Handler for .change() called. ' + gradYesNo );
-		console.log('hex to rgb '+	shadowColor);
-		
+	$( '#longShd5' ).change(function() {
+		gradSteps = $('#longShd5').val();	
 	});
-	// longShadow();
+	// Call functions to refresh styles and generated code //
 	newColor = hexToRgb('#'+shadowColor);
 	longShadowGenerator();
 	liveCodeOut();
-
 });
-
+// initialize styles //
 setStart();
 shadowApply();
+longShadowGenerator();
+liveCodeOut();
 
 
 });

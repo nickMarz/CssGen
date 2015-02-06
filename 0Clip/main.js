@@ -1,3 +1,4 @@
+ZeroClipboard.config( { swfPath: "http://YOURSERVER/path/ZeroClipboard.swf" } );
 var clientTarget = new ZeroClipboard( $("#clipboard-text"), {
     moviePath: "0Clip/ZeroClipboard.swf",
     debug: false

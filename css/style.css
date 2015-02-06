@@ -34,6 +34,9 @@ text-align: left;
 p#codeOut4 {
 text-align: left;
 }
+p#codeOut7 {
+text-align: left;
+}
 
 i.fa.fa-circle.fa-lg {
 	text-shadow: 0px 0px 13px #000000;
@@ -52,6 +55,13 @@ i.fa.fa-circle.fa-lg {
 	height: 140px;
 	background-color: #DEDEDE;
 }
+.boxBorder {
+	/*width: 65%;*/
+	height: 140px;
+	background-color: #DEDEDE;
+}
+
+
 div#well1 {
 	height: 140px;
 	overflow-y: scroll;
@@ -59,6 +69,10 @@ div#well1 {
 
 div#well4 {
 	height: 200px;
+	overflow-y: scroll;
+}
+div#well7 {
+	height: 140px;
 	overflow-y: scroll;
 }
 input#insetBox {
@@ -104,10 +118,24 @@ i#gitFa {
 }
 
 h1.longshad {
-	color: #000000;
-	text-align: center;
-	font-size: 120pt;
-	font-weight: bold;
-	margin-top: 29px;
+color: #000000;
+text-align: center;
+font-size: 120pt;
+font-weight: bold;
+margin-left: 20%;
+margin-right: 20%;
 }
 /*long shadow page*/
+
+/*Copy to clipboard*/
+
+ .clip_button {
+    width: 150px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: #ccc;
+    margin: 10px;
+    padding: 10px;
+  }
+  .clip_button.zeroclipboard-is-hover { background-color: #eee; }
+  .clip_button.zeroclipboard-is-active { background-color: #aaa; }
