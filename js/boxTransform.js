@@ -15,7 +15,7 @@ transform = function(){
 	$("#boxTrans").css({'transform':'scale('+ scale +') '+ 'rotate('+rotate +"deg) translateX("+ transX +"px) translateY("+ transY+'px)'});
 
 	liveCodeOut = function(){
-		$('#codeOut2').html('<p>{' + 
+		$('#codeOut6').html('<p>{' + 
 			'<br> -moz-transform: '+'scale('+ scale +') '+ 'rotate('+rotate +"deg) translateX("+ transX +"px) translateY("+ transY+'px);<br>' + 
 			'-webkit-transform: '+'scale('+ scale +') '+ 'rotate('+rotate +"deg) translateX("+ transX +"px) translateY("+ transY+'px);<br>' + 
 			'transform: '+'scale('+ scale +') '+ 'rotate('+rotate +"deg) translateX("+ transX +"px) translateY("+ transY+'px);<br>' + 

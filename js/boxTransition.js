@@ -15,7 +15,7 @@ radiusApply = function(){
 	$("#boxRound").css({'border-radius': topLeft+" "+topRight+" "+bottomLeft+" "+bottomRight});
 
 	liveCodeOut = function(){
-		$('#codeOut2').html('<p>{' + 
+		$('#codeOut5').html('<p>{' + 
 			'<br> -moz-border-radius: '+ topLeft +' '+ topRight +' '+ bottomLeft +' '+ bottomRight + ';<br>' + 
 			'-webkit-border-radius: '+ topLeft +' '+ topRight +' '+ bottomLeft +' '+ bottomRight + ';<br>' + 
 			'border-radius: '+ topLeft +' '+ topRight +' '+ bottomLeft +' '+ bottomRight + ';<br>' + 
