@@ -31,7 +31,6 @@ hexToRgb = function(hex, op) {
 newColor = hexToRgb('#'+shadowColor);
 
 // hex to RGB converter //
-
 // Set defualt CSS values //
 setStart = function(){
 	$('#longShad').css('text-shadow: #000000 0px 0px');
