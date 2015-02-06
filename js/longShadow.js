@@ -45,7 +45,8 @@ liveCodeOut = function(){
 };
 
 longShadowGenerator = function(){
-
+	gradSteps = $('#longShd5').val();
+	var opacity = parseFloat(gradSteps);
 	var loopTimes = $('#longShd3').val();
 	var x = parseInt(loopTimes);
 	// var opacity = parseFloat(gradSteps);
