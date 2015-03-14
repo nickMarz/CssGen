@@ -1,7 +1,7 @@
 # CssGen
-CSS3 live code generator
+CSS3 live markdown generator
 
-Gorks for the Following styles:
+Works for the Following styles:
 Text Shadow
 Long & Flat Shadow
 Box Shadow
